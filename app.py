@@ -13,8 +13,8 @@ notes = [
         "modifiedAt": "2025-04-03T12:00:00Z",
         "tags": ["flutter", "học tập", "mobile"],
         "color": "#FFB74D"
-    },
-    # Các ghi chú khác...
+    }
+    # Có thể thêm nhiều ghi chú khác...
 ]
 
 # Danh sách tài khoản
@@ -27,20 +27,19 @@ accounts = [
         "status": "active",
         "lastLogin": "2025-04-01T10:30:00Z",
         "createdAt": "2025-04-01T09:00:00Z"
-    }
-       {
+    },
+    {
         "id": 2,
         "userId": 102,
-        "username": "Admin",
+        "username": "user",
         "password": "Abc@123",
         "status": "active",
         "lastLogin": "2025-04-01T10:30:00Z",
         "createdAt": "2025-04-01T09:00:00Z"
-    },
-    # Các tài khoản khác...
+    }
 ]
 
-# Endpoint cho Notes
+# ------------------- NOTES ENDPOINT -------------------
 
 @app.route('/notes', methods=['GET'])
 def get_all_notes():
@@ -78,7 +77,7 @@ def delete_note(note_id):
         return jsonify({"message": "Note deleted"})
     return jsonify({"error": "Note not found"}), 404
 
-# Endpoint cho Accounts
+# ------------------- ACCOUNTS ENDPOINT -------------------
 
 @app.route('/accounts', methods=['GET'])
 def get_all_accounts():
@@ -115,6 +114,8 @@ def delete_account(account_id):
         accounts = [acc for acc in accounts if acc["id"] != account_id]
         return jsonify({"message": "Account deleted"})
     return jsonify({"error": "Account not found"}), 404
+
+# ------------------- MAIN -------------------
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
