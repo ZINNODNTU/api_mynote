@@ -13,15 +13,6 @@ notes = [
         "modifiedAt": "2025-04-03T12:00:00Z",
         "tags": ["flutter", "học tập", "mobile"],
         "color": "#FFB74D"
-    }
-    {
-        "id": 2,
-        "userId": 102,
-        "username": "user",
-        "password": "Abc@123",
-        "status": "active",
-        "lastLogin": "2025-04-01T10:30:00Z",
-        "createdAt": "2025-04-01T09:00:00Z"
     },
     # Các ghi chú khác...
 ]
@@ -33,6 +24,15 @@ accounts = [
         "userId": 101,
         "username": "user1",
         "password": "password123",
+        "status": "active",
+        "lastLogin": "2025-04-01T10:30:00Z",
+        "createdAt": "2025-04-01T09:00:00Z"
+    }
+       {
+        "id": 2,
+        "userId": 102,
+        "username": "Admin",
+        "password": "Abc@123",
         "status": "active",
         "lastLogin": "2025-04-01T10:30:00Z",
         "createdAt": "2025-04-01T09:00:00Z"
